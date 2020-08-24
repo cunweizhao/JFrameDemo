@@ -3,6 +3,7 @@ package com.zcw.jframe;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.Ellipse2D;
 
 /**
  * @ClassName : AlgoFrame
@@ -50,7 +51,20 @@ public class AlgoFrame extends JFrame {
         @Override
         public void paintComponent(Graphics g){
             super.paintComponent(g);
-            g.drawOval(50,50,300,300);
+            //g.drawOval(50,50,300,300);
+
+            Graphics2D g2d = (Graphics2D)g;
+
+
+            int strokeWidth =10;
+            g2d.setStroke(new BasicStroke(strokeWidth));
+
+            g2d.setColor(Color.RED);
+            Ellipse2D circle = new Ellipse2D.Double(50,50,300,300);
+            g2d.draw(circle);
+
+            Ellipse2D circle2 = new Ellipse2D.Double(60,60,280,280);
+            g2d.fill(circle2);
         }
 
         @Override
