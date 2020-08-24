@@ -10,13 +10,17 @@ import java.awt.*;
  * @Date: 2020-08-24 09:07
  */
 public class JFrameMain {
+
     public static void main(String[] args) {
         EventQueue.invokeLater(() ->{
-            JFrame jframe = new JFrame("Welcome");
-            jframe.setSize(500,500);
-            jframe.setResizable(false);
-            jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            jframe.setVisible(true);
+//            JFrame jframe = new JFrame("Welcome");
+//            jframe.setSize(500,500);
+//            jframe.setResizable(false);
+//            jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//            jframe.setVisible(true);
+
+            //第二种实现方式
+            AlgoFrame frame = new AlgoFrame("Welcome",500,500);
         });
 
     }
